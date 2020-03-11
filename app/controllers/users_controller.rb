@@ -18,4 +18,9 @@ class UsersController < ApplicationController
     )
     render plain: "User Created Successfully.. #{u.id}"
   end
+
+  def login
+    render plain: User.where("email = ? and password = ?",
+                             params[:email], params[:password]).exists?
+  end
 end
