@@ -77,6 +77,10 @@ body {
   color: #453C52;
 }
 
+.TodoItem-text {
+  text-decoration-line: line-through;
+}
+
 .TodoItem-container {
   display: flex;
   padding: 2px 8px;
