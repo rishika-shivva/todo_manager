@@ -34,20 +34,4 @@ class Todo < ActiveRecord::Base
     todo.save
     todo
   end
-
-  def self.show_list
-    puts "My Todo-list\n\n"
-
-    puts "Overdue\n"
-    puts all.overdue.displayable_list
-    puts "\n\n"
-
-    puts "Due Today\n"
-    puts all.due_today.displayable_list
-    puts "\n\n"
-
-    puts "Due Later\n"
-    puts all.due_later.displayable_list
-    puts "\n\n"
-  end
 end
